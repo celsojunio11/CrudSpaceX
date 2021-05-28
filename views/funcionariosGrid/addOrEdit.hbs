@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/funcionarios" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{funcionarios._id}}">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome" placeholder="Nome" value="{{funcionarios.nome}}">
+        <div class="text-danger">
+            {{funcionarios.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{funcionarios.email}}">
+        <div class="text-danger">
+            {{funcionarios.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Nacionalidade</label>
+            <input type="text" class="form-control" name="nacionalidade" placeholder="Nacionalidade" value="{{funcionarios.nacionalidade}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Cidade</label>
+            <input type="text" class="form-control" name="cidade" placeholder="Cidade" value="{{funcionarios.cidade}}">
+        </div>
+         <div class="form-group col-md-6">
+            <label>Telefone</label>
+            <input type="text" class="form-control" name="telefone" placeholder="telefone" value="{{funcionarios.telefone}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Enviar</button>
+        <a class="btn btn-secondary" href="/funcionarios/list"><i class="fa fa-list-alt"></i>Mostrar todos funcionários</a>
+    </div>
+</form>
