@@ -1,12 +1,12 @@
 <h3>{{viewTitle}}</h3>
 
-<form action="/funcionarios" method="POST" autocomplete="off">
+<form action="/funcionariosGrid" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{funcionarios._id}}">
     <div class="form-group">
         <label>Nome</label>
         <input type="text" class="form-control" name="nome" placeholder="Nome" value="{{funcionarios.nome}}">
         <div class="text-danger">
-            {{funcionarios.fullNameError}}</div>
+            {{funcionarios.nomeError}}</div>
     </div>
     <div class="form-group">
         <label>Email</label>
@@ -30,6 +30,6 @@
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Enviar</button>
-        <a class="btn btn-secondary" href="/funcionarios/list"><i class="fa fa-list-alt"></i>Mostrar todos funcionários</a>
+        <a class="btn btn-secondary" href="/funcionariosGrid/list"><i class="fa fa-list-alt"></i>Mostrar todos funcionários</a>
     </div>
 </form>

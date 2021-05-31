@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secondary" href="/funcionarios"><i class="fa fa-plus"></i> Criar novo </a> Lista de Funcionarios</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Nacionalidade</th>
+            <th>Cidade</th>
+            <th>Telefone</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.nome}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.nacionalidade}}</td>
+            <td>{{this.cidade}}</td>
+            <td>{{this.telefone}}</td>
+            <td>
+                <a href="/funcionarios/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/funcionarios/delete/{{this._id}}" onclick="return confirm('Deseja realmente excluir?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
